@@ -50,6 +50,32 @@ header > .inner {
   font-size: 15px;
 }
 
+.btn--gold{
+  border-color: #966932;
+  color: #966932;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.btn--gold:hover{
+  border-color: #966932;
+  color: white;
+  text-decoration: underline;
+}
+
+.btn--brown{
+  color: #633510;
+  border-color: #633510;
+  transition: 0.6s;
+}
+
+.btn--brown:hover{
+  background-color: #633510;
+  color: white;
+  text-decoration: underline;
+}
+
+
 .btn--light-green {
   color: #076443;
   border-color: #076443;
@@ -63,6 +89,19 @@ header > .inner {
   color: white;
   text-decoration: underline;
 }
+
+.btn--black{
+  color : black;
+  border-color: black;
+}
+
+.btn--black:hover{
+  color : white;
+  border-color: black;
+  background-color: black;
+  transition: 0.6s;
+}
+
 /* HEADER */
 header {
   /* 가이드 */
@@ -579,4 +618,366 @@ header .badges .badge img {
   font-weight: 700;
 }
 
+/* ELSALVADOR */
+ /* width 받아옴  */
 
+.elsalvador{
+  position: relative;
+  height: 570px;
+  background-image: url("../images/elsalvador_bg.jpg");
+  background-size: cover;
+  background-position:  center;
+  overflow: hidden;
+  /* border-style: contain; */
+  /* background-repeat: no-repeat; */
+}
+
+.elsalvador .inner{
+  position: relative;
+  /* background-color: skyblue; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.elsalvador .inner img.elsalvador__item{
+  position: absolute;
+  width: 310px;
+  top: 70px;
+  left: 110px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+  /* position: relative;
+  width: 271px;
+  height: 383px; */
+}
+
+.elsalvador:active .inner .elsalvador__item{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.elsalvador:active .inner .elsalvador__contents{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.elsalvador .inner .elsalvador__contents {
+  position: absolute;
+  width: 339px;
+  top: 180px;
+  right: 140px;
+  transform: translateX(900px);
+  opacity: 0;
+  transition: 2.5s;
+  /* position: relative; */
+  /* display: flex; */
+  /* justify-content: center;
+  text-align: center; */
+}
+.elsalvador .inner .elsalvador__contents .item-text{
+  /* display: flex;
+  justify-content: center;
+  text-align: center; */
+  /* position: absolute; */
+  /* left: 0;
+  top: 50%;
+  transform: translate(-50%); */
+}
+.elsalvador .inner .elsalvador__contents .btn--brown{
+  /* display: block; */
+  /* position: absolute; */
+  /* top: 50%;
+  transform: translate(-50%); */
+  margin-top: 50px;
+  /* left right 0 margin auto */
+
+  
+}
+
+.ethiopia{
+  height: 400px;
+  background-image: url("../images/ethiopi");
+  everflow: hidden;
+  background-size: contain;
+}
+
+.ethiopia .inner {
+  position: fixed;
+}
+
+.ethiopia .inner .ethiopia__contents {
+  position: absolute;
+  width: 496px;
+  top: 120px;
+}
+
+.ethiopia .inner .ethiopia__item {
+  position: absolute;
+  left: -500px;
+  opacity: 0;
+}
+
+
+.ethiopia.animate .inner .ethiopia__item {
+  transition: 1.5s;
+  transition-delay: 0.8s;
+  opacity: 1;
+}
+
+
+.ethiopia:active::before,
+.ethiopia:active::after{
+  transition: 1.5s;
+  opacity: 1;
+}
+
+/* .ethiopia::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  display: block;
+  background-image: url("../images/ethiopia_before.png");
+
+} */
+
+.ethiopia::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  display: block;
+  background-image: url("../images/ethiopia_before.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 425px;
+  height: 404px;
+  opacity: 0;
+}
+
+.ethiopia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background-image: url("../images/ethiopia_after.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 361px;
+  height: 404px;
+  opacity: 0;
+}
+
+
+.ethiopia .inner .btn.btn--gold {
+  position: absolute;
+  left: 260px;
+  top: 270px;
+}
+
+
+/* FAVORITE */
+.favorite {
+  position: relative;
+  background-image: url("../images/fav_bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 800px;
+}
+
+.favorite .inner {
+}
+
+.favorite .inner .favorite__text-1 {
+  position: absolute;
+  width: 258px;
+  top: 120px;
+  left: 108px;
+  transform: translate(-700px);
+}
+
+.favorite .inner .favorite__text-2 {
+  position: absolute;
+  width: 362px;
+  top: 370px;
+  transform: translate(-700px);
+}
+
+.favorite.animate .inner .favorite__text-1 {
+  transform: translate(0px);
+  transition: 2s;
+}
+
+.favorite.animate .inner .favorite__text-2 {
+  transform: translate(0px);
+  transition: 2.5s;
+}
+
+.favorite .inner .favorite__img {
+  position: absolute;
+  width: 912px;
+  top: 100px;
+  right: -260px;
+}
+
+.favorite .inner .btn.btn--white {
+  position: absolute;
+  top: 580px;
+  left: 238px;
+}
+
+
+/* magazine */
+.magazine{
+  position: relative;
+  height: 400px;
+  /* margin-top: 10px; */
+  /* background-position-x: center; */
+  background-image: url("../images/magazine_bg.png");
+  background-position: center 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;  
+  /* background-color: orange; */
+}
+.magazine .inner{
+  /* background-color: orange; */
+}
+.magazine .inner .magazine__text{
+  position: absolute;
+  top: 135px;
+  width:580px;
+  left: 60px;
+
+}
+.magazine .inner .btn.btn--black{
+  position: absolute;
+  top: 270px;
+  left: 295px;
+}
+
+.magazine .inner .magazine__img{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width:340px;
+  right: 50px;
+  transition: 1.5s;
+}
+
+.magazine:active .inner .magazine__img{
+  opacity: 1;
+  transition: 1.5s;
+}
+
+/* STORE */
+.store{
+  position: relative;
+  height: 400px;
+  background-image: url("../images/store_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.store .inner {
+  height: 400px;
+}
+.store .inner .store__text-1{
+  position: absolute;
+  width: 385px;
+  top: 100px;
+  right: 50px;
+  transform: translateX(800px);
+  transition: 2s;
+}
+.store .inner .store__text-2{
+  position: absolute;
+  width: 366px;
+  top: 170px;
+  right: 69px;
+  transform: translateX(800px);
+  transition: 2.5s;
+}
+
+
+.store .inner .store__img-1{
+  position: absolute;
+  width: 366px;
+  top:0;
+  left: 70px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.store .inner .store__img-2{
+  position: absolute;
+  width: 228px;
+  top: 150px;
+  left: 300px;
+  opacity: 0;
+  transition: 1.5;
+
+
+}
+.store .inner .store__img-3{
+  position: absolute;
+  width: 348px;
+  top: -60px;
+  left: 430px;
+  opacity: 0;
+  transition: 1.5s;
+
+}
+.store .inner .store__img-4{
+  position: absolute;
+  width: 230px;
+  right: -70px;
+  bottom: 0px;
+  opacity: 0;
+  transition: 1.5s;
+
+}
+
+/* absolute -> 위에 부모는 자식의 요소합 buttonabsolute dlf d일경우 height auto- 1  */
+
+
+.store:active .inner .store__img-1,
+.store:active .inner .store__img-2,
+.store:active .inner .store__img-3,
+.store:active .inner .store__img-4{
+  opacity: 1;
+}
+
+.store:active .inner .store__text-1,
+.store:active .inner .store__text-2{
+  transform: translateX(0);
+}
+
+/* .store .inner .btn.btn--black{
+  position: absolute;
+  top: 290px;
+  right: 330px;
+
+  transform: translateX(800px);
+  transition: 3s;
+} */
+
+.store .inner .btn.btn--black {
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  transform: translateX(800px);  
+}
+
+.store:active .inner .store__text-1,
+.store:active .inner .store__text-2 {
+  transform: translateX(0);
+}
+
+.store:active .inner .btn.btn--black {
+  transform: translateX(0);
+  transition: transform 3s, background-color 0.6s, color 0.6s, text-decoration 0.6s;  
+}
