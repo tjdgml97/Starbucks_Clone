@@ -129,7 +129,7 @@ header .inner .logo {
 }
 
   /* submenus */
-header .inner .sub-menus {
+header .inner .sub-menu {
   font-family: 'Avenir', sans-serif;
   display: flex;
   position: absolute;
@@ -137,15 +137,15 @@ header .inner .sub-menus {
   right: 50px;
 }
 
-header .inner .sub-menus ul.sub-menus__menu {
+header .inner .sub-menu ul.sub-menu__menu {
   display: flex;
 }
 
-header .inner .sub-menus .sub-menus__menu > li {
+header .inner .sub-menu .sub-menu__menu > li {
 
 }
 
-header .inner .sub-menus .sub-menus__menu > li:not(:first-child)::before {
+header .inner .sub-menu .sub-menu__menu > li:not(:first-child)::before {
   position: absolute;
   content: "";
   display: block;
@@ -157,18 +157,48 @@ header .inner .sub-menus .sub-menus__menu > li:not(:first-child)::before {
   bottom: 0;
 }
 
-header .inner .sub-menus .sub-menus__menu > li:hover {
+header .inner .sub-menu .sub-menu__menu > li:hover {
   text-decoration: underline;
 }
 
-header .inner .sub-menus .sub-menus__menu > li > a {
+header .inner .sub-menu .sub-menu__menu > li > a {
   display: block;
   font-size: 13px;
   padding: 10px 15px;
   color: #656565;
 }
 
-header .inner .sub-menus .search {
+header .inner .sub-menu .search > input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;  
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  transition: width 0.4s;
+}
+
+header .inner .sub-menu .search > input:focus {
+  width: 190px;
+}
+
+header .inner .sub-menu .search > input:focus::placeholder {
+  color: #656565;
+}
+
+header .inner .sub-menu .search > .material-symbols-outlined {
+  position: absolute;
+  margin: auto;
+  right: 3px;
+  top: 0;
+  bottom: 0;
+  height: 24px;
+}
+
+
+
+/* header .inner .sub-menus .search {
   position: relative;
 }
 
@@ -216,7 +246,7 @@ header .inner .sub-menus .search > .material-symbols-outlined {
 header .inner .sub-menus .search > .material-symbols-outlined {
  
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
-}
+} */
 
 /* header .inner .sub-menus .search > .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;

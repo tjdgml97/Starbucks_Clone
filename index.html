@@ -40,7 +40,8 @@
   <meta property="twitter:url" content="" />
 
   <link rel="stylesheet" href="./css/main.css" />
-  <script src="./javascript/starbucksJavaS.js"></script>
+  <!-- <script src="./javascript/starbucksJavaS.js"></script> -->
+  <script defer src="./js/main.js"></script>
  </head>
  <body>
   <!-- HEADER -->
@@ -51,17 +52,24 @@
       <img src="./images/logo.png" alt="스타벅스로고이미지">
     </a>
     <!-- Sub-Menus -->
-    <div class="sub-menus">
-      <ul class="sub-menus__menu">
+    <div class="sub-menu">
+      <ul class="sub-menu__menu">
         <li><a href="#">Sign In</a></li>
         <li><a href="#">My Starbucks</a></li>
         <li><a href="#">Customer Service & Ideas</a></li>
         <li><a href="#">Find a Store</a></li>
       </ul>
       <div class="search">
+        <input type="text" placeholder="통합검색" />
+        <span class="material-symbols-outlined">
+          search
+        </span>
+      </div>
+<!--       
+      <div class="search">
         <input type="text" class="search-extend" />
         <span onclick="Toggleclick()" class="material-symbols-outlined">search</span>
-      </div>
+      </div> -->
     </div>
 
         <!-- MAIN Menu -->
