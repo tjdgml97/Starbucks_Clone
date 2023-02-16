@@ -367,9 +367,17 @@ header .badges .badge img {
   top: 180px;
   left: 80px;
   width: 303px;
+  opacity: 0;
 
   /* background-color: #fff; */
 }
+
+.visual.animate .inner .slogan { 
+  transition: 0.4s;
+  opacity : 1;
+}
+
+
 .visual .inner .slogan img{
   width: 340px;
   /* display: block; */
@@ -382,21 +390,44 @@ header .badges .badge img {
   position: absolute;
 }
 .visual .inner .item-1{
+  opacity: 0;
   width: 290px;
   top: 120px;
   left: 340px;
+  opacity: 0;
 }
+
+.visual.animate .inner .item-1{
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+
 .visual .inner .item-2{
+  opacity: 0;
   width: 310px;
   top : 208px;
   left: 538px
   ;
 }
+.visual.animate .inner .item-2{
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
 .visual .inner .item-3{
+  opacity: 0;
   width: 310px;
   top: 162px;
   left: 762px;
   /* left: 762px; */
+}
+.visual.animate .inner .item-3{
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 1s;
 }
 
 
@@ -509,18 +540,25 @@ header .badges .badge img {
 }
 .notice .notice-line .inner .inner__left h1{
   position: absolute;
-  left: 80px;
-  font-size: 14px;
+  left: 0;
+  font-size: 16px;
   /* position: absolute;
   left: 0; */
 
 }
-.notice .notice-line .inner .inner__left div{
+.notice .notice-line .inner .inner__left .swiper{
   position: absolute;
   left: 80px;
   font-size: 14px;
-
+  height: 62px;
 }
+
+.notice .notice-line .inner .inner__left .swiper .swiper-wrapper .swiper-slide {
+  height: 62px;
+  line-height: 62px;
+  /*swiper 크기가 정확해야함 높이크기로  */
+}
+
 .notice .notice-line .inner .inner__left a{
   position: absolute;
   right:20px;
@@ -553,11 +591,113 @@ header .badges .badge img {
   right: 20px;
   color: black;
 }
+
+.notice .notice-line .inner .inner__right a.show{
+  transform : rotate(180deg);
+}
+
 .notice .notice-line .inner .inner__right a span {
   /* color: white; */
   font-size: 36px;
   display: block;
 }
+
+
+/* PROMOTION */
+.notice .promotion {
+ position : relative;
+ height: 658px;
+ background-color: #f6f5ef;
+ overflow : hidden;
+ transition: height 0.4s;
+}
+
+.notice .promotion.hide {
+  height: 0px;
+}
+
+.notice .promotion .swiper {
+  /* 화면 너비 크게 줘서 center 해도 그렇게 보이지 x  */
+  position: absolute;
+  width: calc(819px*3 + 20px);
+  height: 553px;
+  text-align: center;
+  /* 부모를 이동  */
+  left:50%;
+  /* 자기자신 크기의 50을 이동  */
+  transform: translateX(-50%);
+  top: 40px;
+}
+
+.notice .promotion .swiper .swiper-wrapper{
+}
+.notice .promotion .swiper-pagination{}
+.notice .promotion .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+}
+
+.notice .promotion .swiper-pagination-bullet-active{
+  background-image: url("../images/promotion_on.png");
+  background-size: cover;
+  background-color: transparent;
+}
+
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide{
+  opacity: 0.5;
+  transform: 0.2;
+/* background-color: black; */
+}
+.notice .promotion .swiper .swiper-wrapper .swiper-slide-active{
+  /* background-color: black; */
+  opacity: 1;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn{
+  position: absolute;
+  width: 150px;
+  left: 0;
+  right: 0;
+  bottom : 0;
+  margin:auto;
+}
+
+.notice .promotion .swiper .swiper-pagination{
+  color:red;
+  width: 200px;
+  height: 200px;
+}
+
+.notice .promotion .swiper-button-prev,
+.notice .promotion .swiper-button-next{
+  position: absolute;
+  top:  190px;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border : 2px solid #333;
+  color: #333;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.notice .promotion .swiper-button-prev{
+  left: 50%;
+  transform: translateX(-500px);
+}
+
+.notice .promotion .swiper-button-next{
+  right: 50%;
+  transform: translateX(500px);
+}
+
+
+.notice .promotion .swiper-button-prev::after,
+.notice .promotion .swiper-button-next::after{
+  font-size: 24px;
+}
+
 
 /* REWARDS */
 .rewards {
@@ -683,12 +823,12 @@ header .badges .badge img {
   height: 383px; */
 }
 
-.elsalvador:active .inner .elsalvador__item{
+.elsalvador.animate .inner .elsalvador__item{
   opacity: 1;
   transform: translateX(0);
 }
 
-.elsalvador:active .inner .elsalvador__contents{
+.elsalvador.animate .inner .elsalvador__contents{
   opacity: 1;
   transform: translateX(0);
 }
@@ -757,8 +897,8 @@ header .badges .badge img {
 }
 
 
-.ethiopia:active::before,
-.ethiopia:active::after{
+.ethiopia.animate::before,
+.ethiopia.animate::after{
   transition: 1.5s;
   opacity: 1;
 }
@@ -850,7 +990,7 @@ header .badges .badge img {
   position: absolute;
   width: 912px;
   top: 100px;
-  right: -260px;
+  right: -160px;
 }
 
 .favorite .inner .btn.btn--white {
@@ -898,7 +1038,7 @@ header .badges .badge img {
   transition: 1.5s;
 }
 
-.magazine:active .inner .magazine__img{
+.magazine.animate .inner .magazine__img{
   opacity: 1;
   transition: 1.5s;
 }
@@ -974,15 +1114,15 @@ header .badges .badge img {
 /* absolute -> 위에 부모는 자식의 요소합 buttonabsolute dlf d일경우 height auto- 1  */
 
 
-.store:active .inner .store__img-1,
-.store:active .inner .store__img-2,
-.store:active .inner .store__img-3,
-.store:active .inner .store__img-4{
+.store.animate .inner .store__img-1,
+.store.animate .inner .store__img-2,
+.store.animate .inner .store__img-3,
+.store.animate .inner .store__img-4{
   opacity: 1;
 }
 
-.store:active .inner .store__text-1,
-.store:active .inner .store__text-2{
+.store.animate .inner .store__text-1,
+.store.animate .inner .store__text-2{
   transform: translateX(0);
 }
 
@@ -1002,12 +1142,12 @@ header .badges .badge img {
   transform: translateX(800px);  
 }
 
-.store:active .inner .store__text-1,
-.store:active .inner .store__text-2 {
+.store.animate .inner .store__text-1,
+.store.animate .inner .store__text-2 {
   transform: translateX(0);
 }
 
-.store:active .inner .btn.btn--black {
+.store.animate .inner .btn.btn--black {
   transform: translateX(0);
   transition: transform 3s, background-color 0.6s, color 0.6s, text-decoration 0.6s;  
 }
